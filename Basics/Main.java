@@ -69,7 +69,7 @@
 // }
 //=========================================================
 
-//? Loops
+//! Loops
 
 //Printing 0 to 10
 // import java.util.*;
@@ -88,7 +88,7 @@
 // //? Input from user
 //     System.out.print("Enter number of choice: ");
 //     Scanner obj = new Scanner(System.in);
-//! integer input
+//? integer input
 //     int n = obj.nextInt();
  
 //     for(int k = 0; k <= n; k++) {
@@ -97,11 +97,11 @@
 // // --------------------------------------------------
 //         System.out.print("Enter your name: ");
 //         Scanner sc = new Scanner(System.in);
-// //! String input        
+// // String input        
 //         String name = sc.nextLine();
 //         System.out.println("Hello "+name);
 // ///--------------------------------------------------
-// //! Both int/String
+// //? Both int/String
     // Scanner obj = new Scanner(System.in);
 
     // System.out.println("Enter no : ");
@@ -197,4 +197,23 @@
 //     }
 // }
 //----------------------------------------------------
+//? Fibonacci 
 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Number: ");
+        int n = sc.nextInt(); 
+        
+        int a = 0;
+        int b = 1;
+        for(int i = 0; i < n; i++){
+            System.out.println(a);
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+    }
+}
