@@ -199,21 +199,131 @@
 //----------------------------------------------------
 //? Fibonacci 
 
-import java.util.*;
+// import java.util.*;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Number: ");
-        int n = sc.nextInt(); 
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Number: ");
+//         int n = sc.nextInt(); 
         
-        int a = 0;
-        int b = 1;
-        for(int i = 0; i < n; i++){
-            System.out.println(a);
-            int next = a + b;
-            a = b;
-            b = next;
-        }
-    }
-}
+//         int a = 0;
+//         int b = 1;
+//         for(int i = 0; i < n; i++){
+//             System.out.println(a);
+//             int next = a + b;
+//             a = b;
+//             b = next;
+//         }
+//     }
+// }
+//--------------------------------------------------------
+// //? Count number of digits
+// import java.util.*;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter Number: ");
+//         int n = sc.nextInt();
+//         System.out.println("Here is the count of number: ");
+
+//         int count = 0;
+//         while(n != 0) {
+//             n = n/10;
+//             count++;
+//         }
+//         System.out.println(count);
+
+//         sc.close();
+//     }
+// }
+//------------------------------------------------------
+// //? Digits of a number
+/*
+Input: 123 
+Output: 
+1
+2
+3
+*/
+
+// import java.util.*;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter number: ");
+//         int num = sc.nextInt();
+
+//         // Step 1: Count digits
+//         int temp = num;
+//         int digitCount = 0;
+//         while(temp != 0) {
+//             temp = temp / 10;
+//             digitCount++;
+//         }
+
+//         // Step 2: Print digits one by one
+//         int divisor = (int)Math.pow(10, digitCount - 1);
+//         while(divisor > 0) {
+//             int digit = num / divisor;   // extract leftmost digit
+//             System.out.println(digit);
+//             num = num % divisor;         // remove that digit
+//             divisor = divisor / 10;      // move to next place
+//         }
+
+//         sc.close();
+//     }
+// }
+//-------------------------------------------------
+// //? Reverse of number
+// import java.util.*;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter a numbr: ");
+//         int n = sc.nextInt();
+
+//         while(n > 0) {
+//             int r = n % 10; //store remainder
+//             n = n / 10;      // reduces number length by 1 
+//             System.out.println(r);
+//         }
+        
+
+//         sc.close();
+//     }
+// }
+//---------------------------------------------------------
+// //? Inverse of number
+/*
+i/p: 21453
+o/p: 23154
+*/
+// import java.util.*;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter number: ");
+//         int n = sc.nextInt();
+//         int inv = 0;
+//         int op = 1;
+//         while(n != 0) {
+//             int od = n % 10;
+//             int id = op;
+//             int ip = od;
+
+//             inv = inv + id * (int)Math.pow(10, ip - 1);
+
+//             n = n / 10;
+//             op++;
+//         }
+//         System.out.println(inv);
+        
+
+//         sc.close();
+//     }
+// }
