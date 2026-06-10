@@ -241,8 +241,8 @@
 //------------------------------------------------------
 // //? Digits of a number
 /*
-Input: 123 
-Output: 
+? Input: 123 
+? Output: 
 1
 2
 3
@@ -299,8 +299,8 @@ Output:
 //---------------------------------------------------------
 // //? Inverse of number
 /*
-i/p: 21453
-o/p: 23154
+? i/p: 21453
+? o/p: 23154
 */
 // import java.util.*;
 
@@ -327,3 +327,86 @@ o/p: 23154
 //         sc.close();
 //     }
 // }
+//--------------------------------------------------------------
+//? Rotate a Number
+/*
+? i/p: num = 25398 , rotate = +2
+? o/p:       98253 
+*/
+// import java.util.*;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter number: ");
+//         int n = sc.nextInt();
+//         System.out.print("Rotate by: ");
+//         int k = sc.nextInt();
+//         System.out.println("Rotating by "+k);
+
+//         int temp = n;
+//         int nod = 0;
+//         while (temp > 0) {
+//             temp = temp / 10;
+//             nod++;
+//         }
+        
+//         k = k % nod;
+//         if (k < 0) {
+//             k = k + nod;
+//         }
+
+//         int div = 1;
+//         int mult = 1;
+//         for(int i = 1; i <= nod; i++) {
+//             if (i <= k) {
+//                 div = div * 10;
+//             }
+//             else {
+//                 mult = mult * 10;
+//             }
+//         }
+
+//         int q =n / div;
+//         int r = n % div;
+
+//         int rotate = r * mult + q;
+//         System.out.println(rotate);
+
+//         sc.close();
+//     }
+// }
+//------------------------------------------------
+//? HCF and LCM
+/*
+? eg: HCF(24, 36) = 12
+?     LCM(24,36) = 72
+*/
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number 1 : ");
+        int n1 = sc.nextInt();
+        System.out.print("Enter number 2 : ");
+        int n2 = sc.nextInt();
+
+        int og1 = n1;
+        int og2 = n2;
+
+        while (n1 % n2 != 0) {
+            int rem = n1 % n2;
+            n1 = n2;
+            n2 = rem;
+        }
+        int hcf = n2;
+        int lcm = (og1 * og2) /hcf;
+
+        System.out.println("HCF: "+hcf);
+        System.out.println("LCM: "+lcm);
+
+        sc.close();
+    }
+}
+//-----------------------------------------------
