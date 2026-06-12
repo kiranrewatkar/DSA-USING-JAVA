@@ -382,31 +382,147 @@
 ? eg: HCF(24, 36) = 12
 ?     LCM(24,36) = 72
 */
-import java.util.*;
+// import java.util.*;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number 1 : ");
-        int n1 = sc.nextInt();
-        System.out.print("Enter number 2 : ");
-        int n2 = sc.nextInt();
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter number 1 : ");
+//         int n1 = sc.nextInt();
+//         System.out.print("Enter number 2 : ");
+//         int n2 = sc.nextInt();
 
-        int og1 = n1;
-        int og2 = n2;
+//         int og1 = n1;
+//         int og2 = n2;
 
-        while (n1 % n2 != 0) {
-            int rem = n1 % n2;
-            n1 = n2;
-            n2 = rem;
-        }
-        int hcf = n2;
-        int lcm = (og1 * og2) /hcf;
+//         while (n1 % n2 != 0) {
+//             int rem = n1 % n2;
+//             n1 = n2;
+//             n2 = rem;
+//         }
+//         int hcf = n2;
+//         int lcm = (og1 * og2) /hcf;
 
-        System.out.println("HCF: "+hcf);
-        System.out.println("LCM: "+lcm);
+//         System.out.println("HCF: "+hcf);
+//         System.out.println("LCM: "+lcm);
 
-        sc.close();
-    }
-}
+//         sc.close();
+//     }
+// }
 //-----------------------------------------------
+//? Prime Factorisation
+// import java.util.*;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter No: ");
+//         int n = sc.nextInt();
+
+//         for(int div = 2; div*div <= n; div++) {
+//             while (n % div == 0) {
+//                 n = n / div;
+//                 System.out.println(div + " ");
+//             }
+//         }
+        
+//         if (n != 1) {
+//             System.out.println(n);
+//         }
+
+//         sc.close();
+//     }
+// }
+//================================================
+//! PATTERNS
+/*
+?   *
+?   **
+?   ***
+?   ****
+?   *****
+*/
+// import java.util.*;
+
+// public class Main {
+//     public static void main(String[] args) {
+
+//         for (int i = 1; i <= 5; i++) {
+//             //magic
+//             for(int j = 1; j <= i; j++) {
+//             System.out.print("*");
+            
+//         }
+//         System.out.println();
+            
+//         }
+
+//     }
+// }
+//--------------------------------------------
+/*
+?   *****
+?   ****
+?   ***
+?   **
+?   *
+*/
+// import java.util.*;
+
+// public class Main {
+//     public static void main(String[] args) {
+
+//         for (int i = 5; i >= 1; i--) {
+//             //magic
+//             for(int j = 1; j <= i; j++) {
+//             System.out.print("*");
+            
+//         }
+//         System.out.println();
+            
+//         }
+
+//     }
+// }
+//-------------------------------------------
+/*
+?                                 *
+?                         *       *
+?                 *       *       *
+?         *       *       *       *
+? *       *       *       *       *
+*/
+// import java.util.*;
+
+// public class Main {
+//     public static void main(String[] args) {
+        
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter no: ");
+//         int n = sc.nextInt();
+
+//         int space = n - 1;
+//         int star = 1; 
+
+//         for (int i = 1; i <= 5; i++) {
+            
+//             for(int j = 1; j <= space; j++) {
+//                 System.out.print("\t");
+//             }
+//             for (int j = 1; j <= star; j++) {
+//                 System.out.print("*\t");
+//             }
+//             space--;
+//             star++;
+//             System.out.println();
+//         }
+        
+//     }
+// }
+//------------------------------------------------
+/*
+?       *
+?     * * *
+?   * * * * *
+? * * * * * * *
+*/
